@@ -12,6 +12,7 @@ import { AuthComponent } from './component/auth/auth.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SecondfactorComponent } from './views/secondfactor/secondfactor.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     ProgressiveProfileComponent,
     ProfileComponent,
     AuthComponent,
+    SecondfactorComponent,
   ],
   imports: [
     BrowserModule,
