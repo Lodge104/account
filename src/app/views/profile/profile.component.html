@@ -1,0 +1,55 @@
+<div *ngIf="profile; else loggedOut">
+  <div class="container-fluid col-xl-12">
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="row justify-content-between">
+          <h3 class="form-signin-heading text-center">
+            Your Occoneechee Lodge Thundy-ID Profile
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="profile-image">
+              <img class="profile-image" src="{{ profile.picture }}" />
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="">
+              <h3>Your Name: {{ profile.name }}</h3>
+              <p>Your Email: {{ profile.email }}</p>
+              <p>Your BSA ID: {{ profile.user_metadata.twilioSid }}</p>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-auto"></div>
+          <div class="col-auto"></div>
+        </div>
+        <div *ngIf="profile">
+          <pre>{{ profile | json }}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loggedOut>
+  <div class="container-fluid col-xl-12">
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="d-grid gap-2">
+          <h3 class="form-signin-heading text-center">
+            Your Occoneechee Lodge Thundy-ID Account Information
+          </h3>
+          <div class="alert alert-danger" role="alert">
+            <strong>Woah now!</strong> If you want to see your account
+            information, we need to know who you are! Log in or create an
+            account using the button below.
+          </div>
+          <button class="btn btn-primary" (click)="auth.loginWithRedirect()">
+            Log in or Create an Account
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
