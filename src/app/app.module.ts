@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SecondfactorComponent } from './views/secondfactor/secondfactor.component';
+import { SecondfactorregisterComponent } from './views/secondfactorregister/secondfactorregister.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SecondfactorComponent } from './views/secondfactor/secondfactor.compone
     ProfileComponent,
     AuthComponent,
     SecondfactorComponent,
+    SecondfactorregisterComponent,
   ],
   imports: [
     BrowserModule,
